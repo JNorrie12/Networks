@@ -1,0 +1,37 @@
+\documentclass[]{article}
+
+%opening
+\title{Network Project}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Implementation of the BA Model}
+The BA model is a randomly generated model, which usees a mdethod called preferential attachement to favour which nodes to connect to. This means that nodes with a high degree are more likely to be attached to be new nodes. The algorithm I used works as follows:
+1. Set of an initial network a time $\mathcal{G_0}$.\\
+\newline
+2.Increment time t $\rightarrow$ t+1\\
+\newline
+3.Add one new vertex.
+4. Add m edges as follows..
+....\\...\\..\\
+There are a few points of ambiguity in this model. The first of which is with respect to $\mathcal{G}_0$. There is no explicit guidance on how to choose $\mathcal{G}_0\!$, however the choice of starting graph does have an affect. When deriving a solving the master equation for the system, we will use the approximation that $E(t)=mN(t) \!for\! large\! t$. However we can make this approximation exact by choosing an $\mathcal{G}_0$ such that $E(0)=mN(0)$.\\
+In finding this, one assumption I would like to make is that ever node in $\mathcal{G_0}$ has the same degree. This make an easily programmably starting graph.This implies that $deg(n)=m\! for\! n \in \mathcal{G_0}$\\
+There are many graphs with this property, however I would like to minimise the number of nodes in my starting graph(So our starting graph does not change our statistic) which implies we want a complete graph. THe algebra is as follow:
+In a complete graph $E=\sum_{n=1}^{N} n-1 = \frac{N(N-1)}{2}$\\
+\vspace{0.2cm}
+And so $E(0)=mN(0) \Rightarrow \frac{N(0)(N(0)-1)}{2}=mN(0)$\\
+\vspace{0.2cm}
+$\Rightarrow N(0)^2 - (2m -1)N = 0$\\
+\vspace{0.2cm}
+$\Rightarrow N=0 (trivial) and N=2m+1$\\
+\vspace{0.2cm}
+Therefore choosing $\mathcal{G}_0$ to be a complete graph with $2m+1$ nodes is sufficient for the condition $E(0)=mN(0)$.
+
+\end{document}
