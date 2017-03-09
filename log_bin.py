@@ -123,7 +123,7 @@ def lin_bin(data, num_bins):
 # centres - list - the centre of each bin (in log space - ie. geometric mean)
 # counts  - list - the probability of data being in each bin
 ################################################################################
-def log_bin(data, bin_start=1., first_bin_width=1., a=2.5, datatype='float', drop_zeros=False , debug_mode=False):
+def log_bin(data, bin_start=1., first_bin_width=1., a=2.5, datatype='float', drop_zeros=True , debug_mode=False):
     # check datatype is valid
     valid_datatypes = ('float', 'integer')
     if datatype not in valid_datatypes:
@@ -149,14 +149,14 @@ def log_bin(data, bin_start=1., first_bin_width=1., a=2.5, datatype='float', dro
         new_edge = last_edge + bin_width
         bins.append(new_edge)
         bin_width *= a
-    
+    # print bins
     # find how many datapoints are in each bin
     # counts[i] is how many points are there in the bin whose left edge is bins[i]
     indices = np.digitize(data, bins[1:])
     counts = [0. for x in bins[1:]]
     for i in indices:
         counts[i] += 1./num_datapoints
-        
+    
     # normalise number of datapoints by the width of the bin
     # how we do this depends on whether we are binning integers or real numbers
     # by width - we mean the amount of possible values that can fall in that bin
@@ -191,8 +191,10 @@ def log_bin(data, bin_start=1., first_bin_width=1., a=2.5, datatype='float', dro
         except:
             pass
         print 'CENTRES - %s' % centres[:10]
-        
-    return centres, counts
+ 
+
+
+    return centres, counts, bins
 
 # returns the geometric mean of a list
 def geometric_mean(x):
