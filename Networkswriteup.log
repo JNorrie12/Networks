@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.20)  9 MAR 2017 21:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.20)  9 MAR 2017 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -144,54 +144,32 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 19.
 
+</home/john/Documents/Python/Networks/figures/G0m=1.png, id=1, 462.528pt x 346.
+896pt>
+File: /home/john/Documents/Python/Networks/figures/G0m=1.png Graphic file (type
+ png)
+ <use /home/john/Documents/Python/Networks/figures/G0m=1.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/G0m=1.png
+ used on input line 42.
+(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
 
-LaTeX Warning: File `G0m=1.png' not found on input line 42.
+</home/john/Documents/Python/Networks/figures/G0m=2.png, id=3, 462.528pt x 346.
+896pt>
+File: /home/john/Documents/Python/Networks/figures/G0m=2.png Graphic file (type
+ png)
+ <use /home/john/Documents/Python/Networks/figures/G0m=2.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/G0m=2.png
+ used on input line 43.
+(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
 
-
-! Package pdftex.def Error: File `G0m=1.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 ...udegraphics[width=.3\textwidth]{G0m=1.png}
-                                                  \hfill
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `G0m=2.png' not found on input line 43.
-
-
-! Package pdftex.def Error: File `G0m=2.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.43 ...udegraphics[width=.3\textwidth]{G0m=2.png}
-                                                  \hfill
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `G0m=3.png' not found on input line 44.
-
-
-! Package pdftex.def Error: File `G0m=3.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 ...udegraphics[width=.3\textwidth]{G0m=3.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+</home/john/Documents/Python/Networks/figures/G0m=3.png, id=4, 462.528pt x 346.
+896pt>
+File: /home/john/Documents/Python/Networks/figures/G0m=3.png Graphic file (type
+ png)
+ <use /home/john/Documents/Python/Networks/figures/G0m=3.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/G0m=3.png
+ used on input line 44.
+(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--47
 
@@ -205,37 +183,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--47
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+</home/john/Documents/Python/Networks/figures/NonReplace.png, id=21, 462.528pt 
+x 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/NonReplace.png Graphic file 
+(type png)
+ <use /home/john/Documents/Python/Networks/figures/NonReplace.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/NonReplac
+e.png used on input line 53.
+(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
 
-LaTeX Warning: File `NonReplace.png' not found on input line 53.
-
-
-! Package pdftex.def Error: File `NonReplace.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.53 ...aphics[width=.3\textwidth]{NonReplace.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `Replace.png' not found on input line 54.
-
-
-! Package pdftex.def Error: File `Replace.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 ...egraphics[width=.3\textwidth]{Replace.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+</home/john/Documents/Python/Networks/figures/Replace.png, id=22, 462.528pt x 3
+46.896pt>
+File: /home/john/Documents/Python/Networks/figures/Replace.png Graphic file (ty
+pe png)
+ <use /home/john/Documents/Python/Networks/figures/Replace.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Replace.p
+ng used on input line 54.
+(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
 
 ! Argument of \@caption has an extra }.
 <inserted text> 
@@ -287,7 +251,10 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[2]
+[2 </home/john/Documents/Python/Networks/figures/G0m=1.png> </home/john/Documen
+ts/Python/Networks/figures/G0m=2.png> </home/john/Documents/Python/Networks/fig
+ures/G0m=3.png> </home/john/Documents/Python/Networks/figures/NonReplace.png> <
+/home/john/Documents/Python/Networks/figures/Replace.png>]
 ! Extra }, or forgotten $.
 l.75 \Pi(k,t)=\frac{k}{2E(t)}}
                               
@@ -300,64 +267,145 @@ deleted material, e.g., by typing `I$}'.
 [3]
 ! Undefined control sequence.
 l.121 ...ity $\Gamma(n)=(n-1)!$ for $n \in \mathbb
-                                                  {N}_0
+                                                  {N}_0$, the solution becomes:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.122 \section
-              {Comparison with Real Data}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+! Extra }, or forgotten $.
+l.134 A= 2m(m+1)}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.126 -statisitical- chi squared, R^
-                                    2, kolmogorov SMirnoff
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[4]
+</home/john/Documents/Python/Networks/figures/Datafit-m=1N=5.png, id=38, 462.52
+8pt x 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/Datafit-m=1N=5.png Graphic f
+ile (type png)
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.127 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+<use /home/john/Documents/Python/Networks/figures/Datafit-m=1N=5.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Datafit-m
+=1N=5.png used on input line 148.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
 
-[4] [5] (./Networkswriteup.aux) ) 
+Overfull \hbox (117.52686pt too wide) in paragraph at lines 148--149
+ [][] 
+ []
+
+
+</home/john/Documents/Python/Networks/figures/Datafit-m=2N=5.png, id=39, 462.52
+8pt x 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/Datafit-m=2N=5.png Graphic f
+ile (type png)
+
+<use /home/john/Documents/Python/Networks/figures/Datafit-m=2N=5.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Datafit-m
+=2N=5.png used on input line 155.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (117.52686pt too wide) in paragraph at lines 155--156
+ [][] 
+ []
+
+
+</home/john/Documents/Python/Networks/figures/Datafit-m=3N=5.png, id=40, 462.52
+8pt x 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/Datafit-m=3N=5.png Graphic f
+ile (type png)
+
+<use /home/john/Documents/Python/Networks/figures/Datafit-m=3N=5.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Datafit-m
+=3N=5.png used on input line 162.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (117.52686pt too wide) in paragraph at lines 162--163
+ [][] 
+ []
+
+
+</home/john/Documents/Python/Networks/figures/LogBin-m=1N=5.png, id=41, 462.528
+pt x 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/LogBin-m=1N=5.png Graphic fi
+le (type png)
+
+<use /home/john/Documents/Python/Networks/figures/LogBin-m=1N=5.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/LogBin-m=
+1N=5.png used on input line 175.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (117.52686pt too wide) in paragraph at lines 175--176
+ [][] 
+ []
+
+
+</home/john/Documents/Python/Networks/figures/LogBin-m=2N=5.png, id=42, 462.528
+pt x 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/LogBin-m=2N=5.png Graphic fi
+le (type png)
+
+<use /home/john/Documents/Python/Networks/figures/LogBin-m=2N=5.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/LogBin-m=
+2N=5.png used on input line 182.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (117.52686pt too wide) in paragraph at lines 182--183
+ [][] 
+ []
+
+
+</home/john/Documents/Python/Networks/figures/LogBin-m=3N=5.png, id=43, 462.528
+pt x 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/LogBin-m=3N=5.png Graphic fi
+le (type png)
+
+<use /home/john/Documents/Python/Networks/figures/LogBin-m=3N=5.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/LogBin-m=
+3N=5.png used on input line 189.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (117.52686pt too wide) in paragraph at lines 189--190
+ [][] 
+ []
+
+[5] [6 </home/john/Documents/Python/Networks/figures/Datafit-m=1N=5.png>]
+[7 </home/john/Documents/Python/Networks/figures/Datafit-m=2N=5.png>] [8 </home
+/john/Documents/Python/Networks/figures/Datafit-m=3N=5.png>] [9 </home/john/Doc
+uments/Python/Networks/figures/LogBin-m=1N=5.png>] [10 </home/john/Documents/Py
+thon/Networks/figures/LogBin-m=2N=5.png>] [11 </home/john/Documents/Python/Netw
+orks/figures/LogBin-m=3N=5.png>] (./Networkswriteup.aux) ) 
 Here is how much of TeX's memory you used:
- 1510 strings out of 493013
- 21807 string characters out of 6133328
- 82745 words of memory out of 5000000
- 5049 multiletter control sequences out of 15000+600000
- 8708 words of font info for 31 fonts, out of 8000000 for 9000
+ 1553 strings out of 493013
+ 24673 string characters out of 6133328
+ 83754 words of memory out of 5000000
+ 5092 multiletter control sequences out of 15000+600000
+ 8540 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,5n,25p,632b,237s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmtt10.pfb>
-Output written on Networkswriteup.pdf (5 pages, 154062 bytes).
+ 39i,6n,25p,632b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb>
+Output written on Networkswriteup.pdf (11 pages, 473463 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

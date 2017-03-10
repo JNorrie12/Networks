@@ -47,7 +47,7 @@ if input == '1':
 	plt.show()
 
 if input == '2':
-	for m in range(3,4):
+	for m in range(1,4):
 		degreeL= LoadData(10000,m,100)
 		degree=degreeL[0]
 		deg, freq= lb.frequency(degree)

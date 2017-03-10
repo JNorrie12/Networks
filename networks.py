@@ -9,7 +9,8 @@ import json
 import scipy as sp
 import scipy.stats as stats
 import sys
-import matplotlib.lines as mlines
+import random
+from collections import Counter
 #####################################################
 #Slower way of building graph, however remembers edges
 def GenGraph(N, m, repeat=False, draw=False, G0=True):
@@ -86,10 +87,33 @@ def GenGraph2(N,m):
 	return G
 
 
-
-
-
-
+def GenGraph3(N,m, T):
+	t0=time.time()
+	GTotal=[]
+	degreeTotal=[]
+	
+	G0=[] #Making initial graph combinatorically 
+	g=2*m+1
+	for j in range(g-1): 
+		for k in range(j+1,g):
+			G0.extend([j,k])
+	for t in range(T):
+		G=G0[:] 					#Slicing to avoid change G0
+		print G0	
+		for k in range(2*m+1, N):
+			x=random.sample(G,m)
+			for i in x:
+				G.append(i)
+				G.append(k)
+		GTotal.append(G)
+	print time.time()-t0
+	for i in GTotal:
+		degree = Counter(i)
+		#returns a list of degrees for each sample separately
+		degreeTotal.append(degree.values())
+	return np.array(degreeTotal)
+# plt.plot(degree)
+# plt.show()
 ####################SAVING AND LOADING#####################################
 def SaveData(N, m):
 	degree, edges =GenGraph(N, m)
@@ -134,4 +158,31 @@ def SaveDataTrials(N, m, T):
 		json.dump(ef, fp)
 
 ##########################################################################
-# SaveDataTrials(1000,2,100)
+# # SaveDataTrials(1000,2,100)
+# m=1
+degree =GenGraph3(10,1, 10)
+degree= list(degree.flatten())
+deg, freq= lb.frequency(degree)
+norm=float(sum(freq))
+prob= freq/norm
+A= 2*m*(m+1)
+fit1= lambda x: A*x**-3 
+fit2= lambda x: A/(x*(x+1)*(x+2))  
+fit1a = fit1(deg)
+fit2a = fit2(deg) 
+
+plt.loglog(deg,prob, 'k+', zorder=3)
+plt.loglog(deg, fit1a, 'r--',zorder=1)
+plt.loglog(deg, fit2a, 'b-' ,zorder=2)
+# plt.show()
+# G=[]
+# 	#CREATES ORIGINAL GRAPH
+# 	#G=[1,2,1,3,2,3]
+# 	#G=[1,2,1,3,1,4,1,5,2,3,2,4,2,5,3,4,34]
+# m=2
+# g=2*m+1
+# for j in range(g-1): 
+# 	for k in range(j+1,g):
+# 		G.extend([j,k])
+
+# print G

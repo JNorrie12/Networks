@@ -1,6 +1,6 @@
 \documentclass[]{article}
 \usepackage{graphicx}
-\graphicspath{{/home/john/Documents/Python/Networks} }
+\graphicspath{{/home/john/Documents/Python/Networks/figures/} }
 %opening
 \title{Network Project}
 \author{}
@@ -118,13 +118,77 @@ Therefore our difference equation has solution
 \begin{equation}
 p_{\infty}(k)=A\frac{\Gamma(k)}{\Gamma(k+2)}
 \end{equation}
-Using the identity $\Gamma(n)=(n-1)!$ for $n \in \mathbb{N}_0
+Using the identity $\Gamma(n)=(n-1)!$ for $n \in \mathbb{N}_0$, the solution becomes:
+\begin{equation}
+p_{\infty}(k)=\frac{A}{k(k+1)(k+2)}
+\end{equation}
+The constant $A$ can be found by looking at the boundary case, $k=m$, (7) becomes
+\begin{equation}
+p_{\infty}(m)=-\frac{m}{2}p_{\infty}(m)+1
+\end{equation}
+\begin{equation}
+\Rightarrow p_{\infty}(m)=\frac{1}{m+2}
+\end{equation}
+This boundary conditon implies that 
+\begin{equation}
+A= 2m(m+1)}
+\end{equation}
+Thus we derive the solution to the difference equation as:
+\begin{equation}
+p_{\infty}(k)=2m(m+1)/k(k+1)(k+2)
+\end{equation}
+I expect this distribution to be more accurate than that procured by the continuous approximation, as I have made less assumptions and approximations whilst deriving it.
 \section{Comparison with Real Data}
-Now I wish to compare these theoretical plots with the actual data captured by my model.
-I shall test the data for N=100,000 , so there is time for thr ergodic properties assumed to be completed. I shall run my programme for m=1,2,3. 
-shows below is that 
--statisitical- chi squared, R^2, kolmogorov SMirnoff
-
+Now I wish to compare these theoretical plots with the actual data captured by my model.\\
+I shall run my programme for m=1,2,3 and for graphs of 10,000 nodes. I believe this is large enough to allow the ergodic properties of the probabilites, e.i. $p_{infty}(k)$ to arise.\\
+ A key characteristic of the model is that as one increases the number of nodes in the graph ($N$), the maximum dregee $k_1$ observed also increase, which means no matter big the graph, the statistics towards the larger degrees will always be sparse. To combat this I ran the same experiment 100 times in order to build up a enough observatinos for large degree $k$, improving our statistic. Figure 3.1 shows the outcome. 
+ \begin{figure}[htp]
+ 	\centering
+ 	%\includegraphics{figure_1.png}
+ 	\includegraphics{Datafit-m=1N=5.png}
+ 	\caption{\textit{}}
+ \end{figure}
+ \begin{figure}[htp]
+ 	\centering
+ 	%\includegraphics{figure_1.png}
+ 	
+ 	\includegraphics{Datafit-m=2N=5.png}
+ 	\caption{Left: \textit{}}
+ \end{figure} 
+ \begin{figure}[htp]
+ 	\centering
+ 	%\includegraphics{figure_1.png}
+ 	
+ 	\includegraphics{Datafit-m=3N=5.png}
+ 	\caption{Left: \textit{}}
+ \end{figure}  
+Visually, one can see from that for small values of $k$, the probability fits our theoretical distribution perfectly. This is because there are a lot more nodes with degree small $k$, and so a lot more data is available, thus the distirbution is prominent. However, for large $k$ we have fewer and fewar nodes per degree, as predicted. This creates the 'fat tail' affect present on all three figures. \\
+Notice as well that as m increase, our theoretical, and practical data moves closer to the line $p(k)=k^{-3}$. This verfifies the effect I would expect to see for large m.
+\subsection{Statistical Approach}
+I wish to analyse the model statistically. However, the 'fat tail' in the data will surely dominated any statistical test we wish to run. Thus a way of mimising this 'fat tail' affect, while keeping the necessary characteristics of the probability distribution is necessary. How I approached this we by log binning.\\
+When creating anaylsing probability distributions from sampples, data is put into bins, and the frequency recorded. In most cases we have a bin length $b_{n+1}-b_{n}=:\Delta$, which is constant. However in a log bin proccess, the bins have a relation $\frac{b_{n+1}}{b_n}=\Delta$. This means that the bins increase logarithmically as the data grows larger(Hence the name). \\
+This means for small $k$, where the data are plentiful, the bins are small to capture as much information as possible. However for large $k$,  where our data is sparse, the bins are large, meaning the a lot of data is grouped together to help gain insight into the behviour. The geometric mean of each bin is then plotted. Figure 4,5,6 show this:
+ \begin{figure}[htp]
+ 	\centering
+ 	%\includegraphics{figure_1.png}
+ 	
+ 	\includegraphics{LogBin-m=1N=5.png}
+ 	\caption{Left: \textit{}}
+ \end{figure}
+  \begin{figure}[htp]
+  	\centering
+  	%\includegraphics{figure_1.png}
+  	
+  	\includegraphics{LogBin-m=2N=5.png}
+  	\caption{Left: \textit{}}
+  \end{figure}
+   \begin{figure}[htp]
+   	\centering
+   	%\includegraphics{figure_1.png}
+   	
+   	\includegraphics{LogBin-m=3N=5.png}
+   	\caption{Left: \textit{}}
+   \end{figure}
 \section{Largest K}
 -How does it depend on N? Theoretical 4
 -Real data
