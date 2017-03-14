@@ -1,0 +1,14 @@
+#Ignore#
+*.pdf
+*.zip
+*.png
+*.json
+
+*.pyc
+
+#Latex
+*.tex
+*.dvi
+*.log
+*.aux
+*.gz

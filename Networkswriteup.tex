@@ -1,20 +1,32 @@
 \documentclass[]{article}
+\usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{mathtools}
+\usepackage{cleveref}
+\usepackage{courier}
+\usepackage{subcaption}
+\usepackage{units}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{needspace}
+\usepackage{amssymb}
+
 \graphicspath{{/home/john/Documents/Python/Networks/figures/} }
 %opening
+
 \title{Network Project}
-\author{}
+\author{John Norrie}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-
+THIS IS MY ABSTRACT 
 \end{abstract}
 
 \section{Implementation of the BA Model}
-\subsection{The Initial Conditions}
 The BA model is a randomly generated model, which usees a mdethod called preferential attachement to favour which nodes to connect to. This means that nodes with a high degree are more likely to be attached to be new nodes. The algorithm I used works as follows:
 1. Set of an initial network a time $\mathcal{G_0}$.\\
 \newline
@@ -23,6 +35,16 @@ The BA model is a randomly generated model, which usees a mdethod called prefere
 3.Add one new vertex.
 4. Add m edges as follows..
 ....\\...\\..\\
+One of the biggest factors when creating this model is speed. The size of the networks we wish to analyse mean that a fast program is essential. The programme I developed creates a list of numbers, each couplet defining an edge. At the $k^{th}$ time step, a number is chosen at random (uniformly distributed) from this sequnce (x). then the number k and x are appended to the end of the list. This is carried out for $N$ time steps, after which the frequency of numbers are counted, and the outcome is the degree of each node. An example is shown below. \\
+\begin{enumerate}
+\item -$G=[0,1,0,2,1,2]$ is our starting graph, $N=3$, $m=3$
+\item Add 2 new edges
+\item 0 and 2 chossen randomly
+\item $\Rightarrow G=[0,1,0,2,1,2,3,0,3,2]$
+\item \text{Ending the iteration the counts are sorted, giving degree distribution:}\\ $deg(G)=[3,2,3,1]$
+\end{enumerate}
+This forces prereferntial attachement on the system, as if number $i<k$ appears more times in the sequence(e.i has more egdes attached), it is more likely to be chosen.
+\subsection{Initial Graph}
 There are a few points of ambiguity in this model. The first of which is with respect to $\mathcal{G}_0$. There is no explicit guidance on how to choose $\mathcal{G}_0\!$, however the choice of starting graph does have an affect. When deriving a solving the master equation for the system, we will use the approximation that $E(t)=mN(t) \!for\! large\! t$. However we can make this approximation exact by choosing an $\mathcal{G}_0$ such that $E(0)=mN(0)$.\\
 In finding this, one assumption I would like to make is that ever node in $\mathcal{G_0}$ has the same degree. This make an easily programmably starting graph.This implies that $deg(n)=m\! for\! n \in \mathcal{G_0}$\\
 There are many graphs with this property, however I would like to minimise the number of nodes in my starting graph(So our starting graph does not change our statistic) which implies we want a complete graph. THe algebra is as follow:
@@ -57,10 +79,12 @@ Another point of ambiguity is with regards to multiple egdes. In  the model, we 
 \end{figure} 
 This phenomena does not make sense in the circumstances for which this model is implemented, such as modeling the relationships between websites. Therefore I have decided to use the latter case. Also for large systems, theoretically there is no difference, since the probability of a node being chosen twice $\rightarrow 0$.
 \subsection{Udpating Probabilities}
-\\
+
 \subsection{Testing}
-\\
+\subsection{Dynamic Testing}
+\subsection{Macroscopic Testing}
 \section{Theoretical Derivation of Degree}
+
 There are a few ways of approximated the degree distribution $p(k)$, all three of which use the master equation: 
 \begin{equation}
 n(k,t+1)=n(k,t)+m\Pi(k-1,t)n(k-1,t)-m\Pi(k,t)n(k,t)+\delta_{k,m}
@@ -72,7 +96,7 @@ Since we are taking $\Pi(k,t) \propto k$, and that the probabilities are normali
 \end{equation}
 Where $kn(k,t)$ is the number of degrees of the nodes of degree k. Also, each edge is reponsible for 2 degrees, and so:
 \begin{equation}
-\Pi(k,t)=\frac{k}{2E(t)}}
+\Pi(k,t)=\frac{k}{2E(t)}
 \end{equation}
 I have already discussed that $E(t)=mN(t)$ using the initial conditions chosen, and so $\Rightarrow \Pi(k,t)=\frac{k}{2mN(t)}$. Applying this to (1) the master equation becomes:
 \begin{equation}
@@ -84,10 +108,13 @@ p(k,t)=\frac{n(k,t)}{N(t)}\\
 \end{equation}
 So the master equation:
 \begin{equation}
-N(t+1)p(k,t+1)-N(t)p(k,t)=-\frac{k}{2}p(k-1,t)-\frac{k}{2}p(k,t)+ \delta_k,m
+N(t+1)p(k,t+1)-N(t)p(k,t)=-\frac{(k-1)}{2}p(k-1,t)-\frac{k}{2}p(k,t)+ \delta_k,m
 \end{equation}
-\\NOT SURE HERE\\
-In order to go further, we assume that $p(k)$ has nice ergodic properties. This means that $p_{\infty}=lim_{t \rightarrow \infty} p(k,t)$\\, i.e. the limit converges. Applying this to (6) the final form of our master equation becomes:
+In order to go further, we assume that $p(k)$ has nice ergodic properties. This means that $p_{\infty}=lim_{t \rightarrow \infty} p(k,t)$\\, i.e. the limit converges. The Applying this to (6) the final form of our master equation becomes:
+\begin{equation}
+(N(t+1)-N(t))p_{\infty}(k)=-\frac{(k-1)}{2}p_{\infty}(k-1)-\frac{k}{2}p_{\infty}(k)+ \delta_k,m
+\end{equation}
+We note that $N(t)=t$  and so we find the final form of the master equation:
 \begin{equation}
 p_{\infty}(k)=-\frac{1}{2}((k-1)p_{\infty}(k-1)-kp_{\infty}(k)) +\delta_{k,m}
 \end{equation}
@@ -118,7 +145,7 @@ Therefore our difference equation has solution
 \begin{equation}
 p_{\infty}(k)=A\frac{\Gamma(k)}{\Gamma(k+2)}
 \end{equation}
-Using the identity $\Gamma(n)=(n-1)!$ for $n \in \mathbb{N}_0$, the solution becomes:
+Using the identity $\Gamma(n)=(n-1)!$ for $n \in \mathbf{N}_0$, the solution becomes:
 \begin{equation}
 p_{\infty}(k)=\frac{A}{k(k+1)(k+2)}
 \end{equation}
@@ -131,7 +158,7 @@ p_{\infty}(m)=-\frac{m}{2}p_{\infty}(m)+1
 \end{equation}
 This boundary conditon implies that 
 \begin{equation}
-A= 2m(m+1)}
+A= 2m(m+1)
 \end{equation}
 Thus we derive the solution to the difference equation as:
 \begin{equation}
@@ -142,59 +169,186 @@ I expect this distribution to be more accurate than that procured by the continu
 Now I wish to compare these theoretical plots with the actual data captured by my model.\\
 I shall run my programme for m=1,2,3 and for graphs of 10,000 nodes. I believe this is large enough to allow the ergodic properties of the probabilites, e.i. $p_{infty}(k)$ to arise.\\
  A key characteristic of the model is that as one increases the number of nodes in the graph ($N$), the maximum dregee $k_1$ observed also increase, which means no matter big the graph, the statistics towards the larger degrees will always be sparse. To combat this I ran the same experiment 100 times in order to build up a enough observatinos for large degree $k$, improving our statistic. Figure 3.1 shows the outcome. 
- \begin{figure}[htp]
- 	\centering
- 	%\includegraphics{figure_1.png}
- 	\includegraphics{Datafit-m=1N=5.png}
- 	\caption{\textit{}}
- \end{figure}
- \begin{figure}[htp]
- 	\centering
- 	%\includegraphics{figure_1.png}
- 	
- 	\includegraphics{Datafit-m=2N=5.png}
- 	\caption{Left: \textit{}}
- \end{figure} 
- \begin{figure}[htp]
- 	\centering
- 	%\includegraphics{figure_1.png}
- 	
- 	\includegraphics{Datafit-m=3N=5.png}
- 	\caption{Left: \textit{}}
- \end{figure}  
-Visually, one can see from that for small values of $k$, the probability fits our theoretical distribution perfectly. This is because there are a lot more nodes with degree small $k$, and so a lot more data is available, thus the distirbution is prominent. However, for large $k$ we have fewer and fewar nodes per degree, as predicted. This creates the 'fat tail' affect present on all three figures. \\
+ 
+ \begin{figure}[H]
+ 	\makebox[\linewidth][c]{%
+ 		\begin{subfigure}{.6\textwidth}
+ 			\centering
+		 	\includegraphics[width=\textwidth]{Datafit-m=1N=5.png}
+ 			\caption{$m=1$}
+ 		\end{subfigure}%
+ 		\begin{subfigure}{.6\textwidth}
+ 			\centering 
+			\includegraphics[width=\textwidth]{Datafit-m=2N=5.png}
+ 			\caption{$m=2$}
+ 		\end{subfigure}
+ 	}
+ 		\baselineskip
+ 	\makebox[\linewidth][c]{%
+ 		\begin{subfigure}{.6\textwidth}
+ 			\centering 
+		 	\includegraphics[width=\textwidth]{Datafit-m=3N=5.png}
+ 			\caption{$m=3$}
+ 		\end{subfigure}%
+  		\begin{subfigure}{.6\textwidth}
+  			\centering 
+  			\includegraphics[width=\textwidth]{Datafit-m=4N=5.png}
+  			\caption{$m=4$}
+  		\end{subfigure}
+ 	}
+ 	\caption{The loglog plots of the raw data porbability distribuiton. This data was captured from networks of size $10^5$, and over $10^3$ traisl. a,b,c,d show the outcome for m=1,2,3,4 repectively.}
+\end{figure}
+ 
+Visually, one can see from that for small values of $k$, the probability fits our theoretical distribution perfectly. This is because there are a lot more nodes with degree small $k$, and so a lot more data is available, thus the distirbution is prominent. However, for large $k$ we have fewer and fewar nodes per degree, as predicted. This creates the 'fat tail' affect present on all three figures as seen in . \\
 Notice as well that as m increase, our theoretical, and practical data moves closer to the line $p(k)=k^{-3}$. This verfifies the effect I would expect to see for large m.
 \subsection{Statistical Approach}
-I wish to analyse the model statistically. However, the 'fat tail' in the data will surely dominated any statistical test we wish to run. Thus a way of mimising this 'fat tail' affect, while keeping the necessary characteristics of the probability distribution is necessary. How I approached this we by log binning.\\
-When creating anaylsing probability distributions from sampples, data is put into bins, and the frequency recorded. In most cases we have a bin length $b_{n+1}-b_{n}=:\Delta$, which is constant. However in a log bin proccess, the bins have a relation $\frac{b_{n+1}}{b_n}=\Delta$. This means that the bins increase logarithmically as the data grows larger(Hence the name). \\
-This means for small $k$, where the data are plentiful, the bins are small to capture as much information as possible. However for large $k$,  where our data is sparse, the bins are large, meaning the a lot of data is grouped together to help gain insight into the behviour. The geometric mean of each bin is then plotted. Figure 4,5,6 show this:
- \begin{figure}[htp]
- 	\centering
- 	%\includegraphics{figure_1.png}
- 	
- 	\includegraphics{LogBin-m=1N=5.png}
- 	\caption{Left: \textit{}}
- \end{figure}
-  \begin{figure}[htp]
-  	\centering
-  	%\includegraphics{figure_1.png}
-  	
-  	\includegraphics{LogBin-m=2N=5.png}
-  	\caption{Left: \textit{}}
-  \end{figure}
-   \begin{figure}[htp]
-   	\centering
-   	%\includegraphics{figure_1.png}
-   	
-   	\includegraphics{LogBin-m=3N=5.png}
-   	\caption{Left: \textit{}}
+I wish to analyse the model statistically. However, the 'fat tail' characteristic of the data means that the majority of our points lie near the origin. Therefore any statistical method I use will be dominated by the 'fat tail', and any conclusion I draw will be obscured. Log binning is way of mimising the 'fat tail, while keeping the necessary characteristics of the probability distribution.\\
+When creating probability distributions from samples, data is put into bins, the frequency recorded and then normalised. In most cases we have a bin lengths constant, $b_{n+1}-b_{n}=:\Delta$. However in a log bin proccess, the bins have a relation $\frac{b_{n+1}}{b_n}=\Delta$. This means that the bins increase exponentially as the data grows larger. \\
+This means for small $k$, where the data are plentiful, the bins are small to capture as much information as possible. However for large $k$,  where our data is sparse, the bins are large, meaning the a lot of data is grouped together to help gain insight into the behviour. The geometric mean of each bin is then plotted. Figure 4 shows how the log bin processes the raw data.
+ \begin{figure}[H]
+ 	 	\makebox[\linewidth][c]{%
+ 	 		\begin{subfigure}{.6\textwidth}
+ 	 			\centering
+ 	 			\includegraphics[width=\textwidth]{LogBin-m=1N=5.png}
+ 	 			\caption{$m=1$}
+ 	 		\end{subfigure}%
+ 	 		\begin{subfigure}{.6\textwidth}
+ 	 			\centering 
+ 	 			\includegraphics[width=\textwidth]{LogBin-m=2N=5.png}
+ 	 			\caption{$m=2$}
+ 	 		\end{subfigure}
+ 	 	}
+  		\baselineskip
+  		\makebox[\linewidth][c]{%
+  			\begin{subfigure}{.6\textwidth}
+  				\centering 
+  				\includegraphics[width=\textwidth]{LogBin-m=3N=5.png}
+  				\caption{$m=3$}
+  			\end{subfigure}%
+  			\begin{subfigure}{.6\textwidth}
+  				\centering 
+  				\includegraphics[width=\textwidth]{LogBin-m=4N=5.png}
+  				\caption{$m=4$}
+  			\end{subfigure}
+  		}
+  		\caption{Log binned probability distributions for $m=1,2,3,4$. The error bars show the logarithm of the deviation for a given data point. The increase of the bars implies that the variance of the data increases exponentially for large values of $k$}	 	
    \end{figure}
-\section{Largest K}
--How does it depend on N? Theoretical 4
--Real data
--Estimate uncertainties/errors
+To statisitically analyse this data I plotted the theoretical fit and naive fit vs. the actual logbinned data. Assuming that my two fits and the actuall data are related, one would expect to see a linear regression between the variables. Figure 5 shows an example of this.
+\begin{figure}[H]
+	 	 	\makebox[\linewidth][c]{%
 
--data collapse?
-
-
+	 	 		\begin{subfigure}{.5\textwidth}
+	 	 			\centering 
+	 	 			\includegraphics[width=\textwidth]{LR-m=4LB.png}
+	 	 			\caption{$m=2$}
+	 	 		\end{subfigure}
+	 	 	}
+	 	   		\caption{The theoretical model(red) and the naive model(black) vs. the log binned, for $m=4$.
+	 	   			}
+\end{figure}
+Fro firgure 5, one can see a definite linear relation in both cases. However to delve deeper, I calculated the least squares regression statistic($R^2$) for each of these relations. Using these I tested with the null hypothesis that there is no correlation(e.i. the slope between the two variable is 0) vs. the hypothesis that they are correlated using WHAT IS THE TEST CALLED????. All my statistics are listed below.
+\begin{table}[H]
+	\centering
+	\caption{My caption}
+	\label{my-label}
+	\begin{tabular}{l|l|l|l|l|}
+		\cline{2-5}
+		& \multicolumn{4}{l|}{Linear Regression for Log Binned Data}            \\ \cline{2-5} 
+		& \multicolumn{2}{l|}{Naive Fit} & \multicolumn{2}{l|}{Theoretical Fit} \\ \cline{2-5} 
+		& $R^2$        & p-value         & $R^2$            & p-vaule           \\ \hline
+		\multicolumn{1}{|l|}{m=1} & 0.992        & 2.71e-25        & 0.999            & 2.87e-40          \\ \hline
+		\multicolumn{1}{|l|}{m=2} & 0.993        & 2.71e-25        & 0.999            & 2.86e-40          \\ \hline
+		\multicolumn{1}{|l|}{m=3} & 0.993        & 2.72e-25        & 0.996            & 2.69e-28          \\ \hline
+		\multicolumn{1}{|l|}{m-4} & 0.991        & 2.35e-24        & 0.994            & 2.72e-26          \\ \hline
+	\end{tabular}
+\end{table}
+Examining these statisitcs, one can see that in all cases, the p-statistic is very small. Infact we can reject the null hypothesis with a confidence level of 1.e-25 for all stastics. This impies that there is definitly correlation, and therefore both models would suffice.\\
+To analyse which model is better one needs to examine the $R^2$ terms. For all $m$, the $R^2$ statistic is great for the theoretical fit, than that of the naive fit. This implies that the theoretical fit is better.
+Note that the difference $R^2$ statistics for the two fits shrinks. This is more evidence that points towards the phenomena that as m increases our two fits converge.    
+\section{Finite Size Effect}
+\subsection{Theoretical Derivation}
+I wish to find how the greatest degree $k_1$. To do this I look at the master equation in the form:
+\begin{equation}
+N(t+1)p(k,t+1)-N(t)p(k,t)=-\frac{(k-1)}{2}p(k-1,t)-\frac{k}{2}p(k,t)+ \delta_{k,m}	
+\end{equation}
+Again taking the limiting case, but this time in both $k$ and $t$:
+\begin{equation}
+N(t+\Delta t)p(k,t+\Delta t)-N(t)p(k,t)=-\frac{1}{2}((k-\Delta k)p(k-\Delta k,t)-kp(k,t))+ \delta_{k,m}		
+\end{equation}
+To go further I make some assumptions. First of all we wish to express equation in terms of partial derivatives. And so we assume that $\Delta k ~ O(\Delta t^{\alpha})$, e.i. when $\Delta t \rightarrow 0 \Rightarrow \Delta k \rightarrow 0$. \\
+Another assumption is that we can ignore the  $\delta_{k,m}$ term. Doing this means we can take the derivative limit:
+\begin{equation}
+	\frac{N(t+\Delta t)p(k,t+\Delta t)-N(t)p(k,t)}{\Delta t}=-\frac{(k-\Delta k)p(k-\Delta k,t)-p(k,t)}{2 \Delta k}
+\end{equation}
+Taking the limit:
+\begin{equation}
+\frac{\partial (N(t)p(k,t))}{\partial t}= -\frac{1}{2}\frac{\partial(kp(k,t))}{\partial k}
+\end{equation}
+Solving this equation we first use the fact that $N(t)=t$, and  the ansatz that $p(k,t)=f(t)k^{-\gamma}$.
+\begin{equation} 
+k^{-\gamma}\frac{\partial (tf(t))}{\partial t}= -\frac{f(t)}{2}\frac{\partial k^{1-\gamma}}{\partial k}
+\end{equation}
+\begin{equation}
+	\Rightarrow \frac{\partial (tf(t))}{\partial t}= -\frac{(1-\gamma)f(t)}{2}
+\end{equation}
+By inpspection a solution to this equation is $f(t) \propto t^{-\alpha}$:
+\begin{equation}
+\Rightarrow  \frac{\partial (t^{1-\alpha})}{\partial t}= -\frac{(1-\gamma)t^{-\alpha}}{2}
+\end{equation}
+\begin{equation}
+\Rightarrow 1- \alpha= -\frac{(1-\gamma)}{2}
+\end{equation}
+Rearranging we obtain $\gamma$ in terms of $\alpha$
+\begin{equation}
+\gamma = 3 - 2\alpha
+\end{equation}
+And so we find the behaviour of the probability solution approximates to:
+\begin{equation}
+p(k,t) \propto (\frac{k^2}{t})^{\alpha}k^{-3} 
+\end{equation}
+We know that for large $t$, $p(k,t) \approx k^-3$ we can assume that
+\begin{equation}
+ \frac{k^2}{t} \propto 1 \Rightarrow k \propto \sqrt{t}
+\end{equation}
+Therefore we expect the largest degree $k_1$ to scale with the square root of $N(t)$. One might be tempted to try and derive $\alpha$, and therefore have an exact theoretical model of how the the degree distribution is affect by the finite size. However in practice this is particularly hard, and many of the features of the degree distribution have already been explained. Therefore I shall not be deriving this in this report.
+\subsection{Experimental Data}
+To test how $k_1$ scales $N$, I ran my program for $N=10^2, 10^3, 10^4, 10^5$, collecting the maximum degrees. I focus on $m=$, the maximum $m$ I recorded because due the the fact that there are more edges, we expect more larger degree observations, giving us a clearler idea of how degree distribuiton behaves in the fat tail. This can be seen in figure 1. The tail for $m=4$ is more defined than that of $m=1,2,3$. We are interested in these larger degrees, as they obviously depend a lot more on the finite size of the graph. The fact that this is an extreme statistic means that it is very intermittent, and therefore one would expect to see a lot of variance between trials. Therefore I repeated this experiment 100 times, and took the median to help gain a more appropriate statistics. Figure 4 shows the result. 
+\begin{figure}[H]
+	\centering
+	%\includegraphics{figure_1.png}
+	
+	\includegraphics[width=.5\textwidth]{k1.png}
+	\caption{The median for $N=1,2,3,4$ and a naive fit of $k1 \propto \sqrt{N}$ are plotted. The error bars represent $\sqrt{deviation}$ from our most extreme statistics and the  median.}
+\end{figure}
+Figure 4 shows that the real data is in accordance with our theoretical model. With respect to the error bars, one can see that the length above each point($\sqrt{max(k_1(N))-<k_1(N)>}$) is vastly greater than that of the below errorbar. This implies that our statistics have much variance above the, than below. This is why I used the median instead of the mean, as the mean would be skewed by this fact.\\
+As the error bars show there is a lot of uncertainty in this relationship, primarily due to the fact e are measuring an extreme statistic for which the occurence is very rare and sporadic. The best way to overcome this is to use more trails.
+\subsection{Data Collapse}
+Since we now know how the degree distribution depends on $k$, $m$ and $N$, I can perform a data collapse. I concentrate on m=4, as it gives me better statistical data for large degree sizes. I vary $N=10^2, 10^3, 10^4, 10^5$. Figure 5 shows a plot of how the uncollapsed degree distributions correlate. 
+\begin{figure}[H]
+	\centering
+	%\includegraphics{figure_1.png}
+	
+	\includegraphics[width=.7\textwidth]{Collapse11.png}
+	\caption{The median for $N=1,2,3,4$ and a naive fit of $k1 \propto \sqrt{N}$ are plotted. The error bars represent $\sqrt{deviation}$ from our most extreme statistics and the  median.}
+\end{figure} 
+\\ First I collapse the probability distribution in k by dividing through by my theoretical prediction:
+\begin{equation}
+	c_k(N)=\frac{p_{data}(k)}{p_{theory}(k)}
+\end{equation}
+Figure 5 shows the outcome of this proccedure.
+\begin{figure}[H]
+	\centering
+	%\includegraphics{figure_1.png}
+	
+	\includegraphics[width=.7\textwidth]{Collapse1.png}
+	\caption{The median for $N=1,2,3,4$ and a naive fit of $k1 \propto \sqrt{N}$ are plotted. The error bars represent $\sqrt{deviation}$ from our most extreme statistics and the  median.}
+\end{figure}
+Now I collapse in N. To do this I use the relation I earlier derived of how the $k_1$ scales with $N$. I stretched the degrees observed by a factor of $N^{-\frac{1}{2}}$. Figure 7 shows the full collapse.
+\begin{figure}[H]
+	\centering
+	%\includegraphics{figure_1.png}
+	
+	\includegraphics[width=.7\textwidth]{Collapse2.png}
+	\caption{The median for $N=1,2,3,4$ and a naive fit of $k1 \propto \sqrt{N}$ are plotted. The error bars represent $\sqrt{deviation}$ from our most extreme statistics and the  median.}
+\end{figure}
 \end{document}

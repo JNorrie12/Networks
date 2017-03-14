@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.20)  9 MAR 2017 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.20)  12 MAR 2017 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,12 +23,70 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks19
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
@@ -50,40 +108,136 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count87
+\Gread@gobject=\count99
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen114
+\captionmargin@=\dimen115
+\captionwidth=\dimen116
+\caption@tempdima=\dimen117
+\caption@indent=\dimen118
+\caption@parindent=\dimen119
+\caption@hangindent=\dimen120
+)
+\c@ContinuedFloat=\count100
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count101
+\calc@Bcount=\count102
+\calc@Adimen=\dimen121
+\calc@Bdimen=\dimen122
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count103
+\calc@Cskip=\skip48
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count104
+\l_MT_multwidth_dim=\dimen123
+\origjot=\skip49
+\l_MT_shortvdotswithinadjustabove_dim=\dimen124
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen125
+\l_MT_above_intertext_sep=\dimen126
+\l_MT_below_intertext_sep=\dimen127
+\l_MT_above_shortintertext_sep=\dimen128
+\l_MT_below_shortintertext_sep=\dimen129
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2013/12/28 v0.19 Intelligent cross-referencing
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+\c@subfigure=\count105
+\c@subtable=\count106
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/units/units.sty
+Package: units 1998/08/04 v0.9b Typesetting units
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip50
+\L@UnitsRaiseTextstyle=\skip51
+\L@UnitsRaiseScriptstyle=\skip52
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count107
+\float@exts=\toks20
+\float@box=\box28
+\@float@everytoks=\toks21
+\@floatcapt=\box29
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 (./Networkswriteup.aux)
 \openout1 = `Networkswriteup.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count88
-\scratchdimen=\dimen105
-\scratchbox=\box26
-\nofMPsegments=\count89
-\nofMParguments=\count90
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count91
-\MPscratchDim=\dimen106
-\MPnumerator=\count92
-\makeMPintoPDFobject=\count93
-\everyMPtoPDFconversion=\toks16
+\scratchcounter=\count108
+\scratchdimen=\dimen130
+\scratchbox=\box30
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen131
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -133,279 +287,322 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 10.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 10.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 10.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 19.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
 
-</home/john/Documents/Python/Networks/figures/G0m=1.png, id=1, 462.528pt x 346.
-896pt>
-File: /home/john/Documents/Python/Networks/figures/G0m=1.png Graphic file (type
- png)
- <use /home/john/Documents/Python/Networks/figures/G0m=1.png>
-Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/G0m=1.png
- used on input line 42.
-(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 
-</home/john/Documents/Python/Networks/figures/G0m=2.png, id=3, 462.528pt x 346.
-896pt>
-File: /home/john/Documents/Python/Networks/figures/G0m=2.png Graphic file (type
- png)
- <use /home/john/Documents/Python/Networks/figures/G0m=2.png>
-Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/G0m=2.png
- used on input line 43.
-(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
-
-</home/john/Documents/Python/Networks/figures/G0m=3.png, id=4, 462.528pt x 346.
-896pt>
-File: /home/john/Documents/Python/Networks/figures/G0m=3.png Graphic file (type
- png)
- <use /home/john/Documents/Python/Networks/figures/G0m=3.png>
-Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/G0m=3.png
- used on input line 44.
-(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--47
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 30--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--47
+Underfull \hbox (badness 10000) in paragraph at lines 30--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--39
 
  []
 
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-</home/john/Documents/Python/Networks/figures/NonReplace.png, id=21, 462.528pt 
+</home/john/Documents/Python/Networks/figures/G0m=1.png, id=16, 462.528pt x 346
+.896pt>
+File: /home/john/Documents/Python/Networks/figures/G0m=1.png Graphic file (type
+ png)
+ <use /home/john/Documents/Python/Networks/figures/G0m=1.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/G0m=1.png
+ used on input line 64.
+(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
+
+</home/john/Documents/Python/Networks/figures/G0m=2.png, id=18, 462.528pt x 346
+.896pt>
+File: /home/john/Documents/Python/Networks/figures/G0m=2.png Graphic file (type
+ png)
+ <use /home/john/Documents/Python/Networks/figures/G0m=2.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/G0m=2.png
+ used on input line 65.
+(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
+
+</home/john/Documents/Python/Networks/figures/G0m=3.png, id=19, 462.528pt x 346
+.896pt>
+File: /home/john/Documents/Python/Networks/figures/G0m=3.png Graphic file (type
+ png)
+ <use /home/john/Documents/Python/Networks/figures/G0m=3.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/G0m=3.png
+ used on input line 66.
+(pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
+
+</home/john/Documents/Python/Networks/figures/NonReplace.png, id=20, 462.528pt 
 x 346.896pt>
 File: /home/john/Documents/Python/Networks/figures/NonReplace.png Graphic file 
 (type png)
  <use /home/john/Documents/Python/Networks/figures/NonReplace.png>
 Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/NonReplac
-e.png used on input line 53.
+e.png used on input line 75.
 (pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
 
-</home/john/Documents/Python/Networks/figures/Replace.png, id=22, 462.528pt x 3
+</home/john/Documents/Python/Networks/figures/Replace.png, id=21, 462.528pt x 3
 46.896pt>
 File: /home/john/Documents/Python/Networks/figures/Replace.png Graphic file (ty
 pe png)
  <use /home/john/Documents/Python/Networks/figures/Replace.png>
 Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Replace.p
-ng used on input line 54.
+ng used on input line 76.
 (pdftex.def)             Requested size: 103.50105pt x 77.62477pt.
-
-! Argument of \@caption has an extra }.
-<inserted text> 
-                \par 
-l.56 ...o emphasise the difference in the cases.}}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-\@captype {\@firstoftwo {\nobreak \@xcentercr }}\def \reserved@b {\@xcentercr \
-ETC.
-! Paragraph ended before \@caption was complete.
-<to be read again> 
-                   \par 
-l.56 ...o emphasise the difference in the cases.}}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61 \subsection
-                {Testing}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.63 \section
-             {Theoretical Derivation of Degree}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
 [2 </home/john/Documents/Python/Networks/figures/G0m=1.png> </home/john/Documen
 ts/Python/Networks/figures/G0m=2.png> </home/john/Documents/Python/Networks/fig
-ures/G0m=3.png> </home/john/Documents/Python/Networks/figures/NonReplace.png> <
-/home/john/Documents/Python/Networks/figures/Replace.png>]
-! Extra }, or forgotten $.
-l.75 \Pi(k,t)=\frac{k}{2E(t)}}
-                              
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[3]
-! Undefined control sequence.
-l.121 ...ity $\Gamma(n)=(n-1)!$ for $n \in \mathbb
-                                                  {N}_0$, the solution becomes:
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Extra }, or forgotten $.
-l.134 A= 2m(m+1)}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[4]
-</home/john/Documents/Python/Networks/figures/Datafit-m=1N=5.png, id=38, 462.52
+ures/G0m=3.png>] [3 </home/john/Documents/Python/Networks/figures/NonReplace.pn
+g> </home/john/Documents/Python/Networks/figures/Replace.png>] [4] [5]
+</home/john/Documents/Python/Networks/figures/Datafit-m=1N=5.png, id=43, 462.52
 8pt x 346.896pt>
 File: /home/john/Documents/Python/Networks/figures/Datafit-m=1N=5.png Graphic f
 ile (type png)
 
 <use /home/john/Documents/Python/Networks/figures/Datafit-m=1N=5.png>
 Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Datafit-m
-=1N=5.png used on input line 148.
-(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+=1N=5.png used on input line 185.
+(pdftex.def)             Requested size: 207.0021pt x 155.25484pt.
 
-Overfull \hbox (117.52686pt too wide) in paragraph at lines 148--149
- [][] 
- []
-
-
-</home/john/Documents/Python/Networks/figures/Datafit-m=2N=5.png, id=39, 462.52
+</home/john/Documents/Python/Networks/figures/Datafit-m=2N=5.png, id=44, 462.52
 8pt x 346.896pt>
 File: /home/john/Documents/Python/Networks/figures/Datafit-m=2N=5.png Graphic f
 ile (type png)
 
 <use /home/john/Documents/Python/Networks/figures/Datafit-m=2N=5.png>
 Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Datafit-m
-=2N=5.png used on input line 155.
-(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+=2N=5.png used on input line 185.
+(pdftex.def)             Requested size: 207.0021pt x 155.25484pt.
 
-Overfull \hbox (117.52686pt too wide) in paragraph at lines 155--156
- [][] 
- []
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.187  	\makebox
+                [\linewidth][c]{%
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.187  	\makebox
+                [\linewidth][c]{%
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
 
-</home/john/Documents/Python/Networks/figures/Datafit-m=3N=5.png, id=40, 462.52
+</home/john/Documents/Python/Networks/figures/Datafit-m=3N=5.png, id=45, 462.52
 8pt x 346.896pt>
 File: /home/john/Documents/Python/Networks/figures/Datafit-m=3N=5.png Graphic f
 ile (type png)
 
 <use /home/john/Documents/Python/Networks/figures/Datafit-m=3N=5.png>
 Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Datafit-m
-=3N=5.png used on input line 162.
-(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+=3N=5.png used on input line 198.
+(pdftex.def)             Requested size: 207.0021pt x 155.25484pt.
 
-Overfull \hbox (117.52686pt too wide) in paragraph at lines 162--163
- [][] 
- []
+</home/john/Documents/Python/Networks/figures/Datafit-m=4N=5.png, id=46, 462.52
+8pt x 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/Datafit-m=4N=5.png Graphic f
+ile (type png)
 
-
-</home/john/Documents/Python/Networks/figures/LogBin-m=1N=5.png, id=41, 462.528
+<use /home/john/Documents/Python/Networks/figures/Datafit-m=4N=5.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Datafit-m
+=4N=5.png used on input line 198.
+(pdftex.def)             Requested size: 207.0021pt x 155.25484pt.
+ [6 </home/john/Documents/Python/Networks/figures/Datafit-m=1N=5.png> </home/jo
+hn/Documents/Python/Networks/figures/Datafit-m=2N=5.png> </home/john/Documents/
+Python/Networks/figures/Datafit-m=3N=5.png> </home/john/Documents/Python/Networ
+ks/figures/Datafit-m=4N=5.png>]
+</home/john/Documents/Python/Networks/figures/LogBin-m=1N=5.png, id=55, 462.528
 pt x 346.896pt>
 File: /home/john/Documents/Python/Networks/figures/LogBin-m=1N=5.png Graphic fi
 le (type png)
 
 <use /home/john/Documents/Python/Networks/figures/LogBin-m=1N=5.png>
 Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/LogBin-m=
-1N=5.png used on input line 175.
-(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+1N=5.png used on input line 220.
+(pdftex.def)             Requested size: 207.0021pt x 155.25484pt.
 
-Overfull \hbox (117.52686pt too wide) in paragraph at lines 175--176
- [][] 
- []
-
-
-</home/john/Documents/Python/Networks/figures/LogBin-m=2N=5.png, id=42, 462.528
+</home/john/Documents/Python/Networks/figures/LogBin-m=2N=5.png, id=56, 462.528
 pt x 346.896pt>
 File: /home/john/Documents/Python/Networks/figures/LogBin-m=2N=5.png Graphic fi
 le (type png)
 
 <use /home/john/Documents/Python/Networks/figures/LogBin-m=2N=5.png>
 Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/LogBin-m=
-2N=5.png used on input line 182.
-(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+2N=5.png used on input line 220.
+(pdftex.def)             Requested size: 207.0021pt x 155.25484pt.
 
-Overfull \hbox (117.52686pt too wide) in paragraph at lines 182--183
- [][] 
- []
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.222   		\makebox
+                  [\linewidth][c]{%
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.222   		\makebox
+                  [\linewidth][c]{%
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
 
-</home/john/Documents/Python/Networks/figures/LogBin-m=3N=5.png, id=43, 462.528
+</home/john/Documents/Python/Networks/figures/LogBin-m=3N=5.png, id=57, 462.528
 pt x 346.896pt>
 File: /home/john/Documents/Python/Networks/figures/LogBin-m=3N=5.png Graphic fi
 le (type png)
 
 <use /home/john/Documents/Python/Networks/figures/LogBin-m=3N=5.png>
 Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/LogBin-m=
-3N=5.png used on input line 189.
-(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+3N=5.png used on input line 233.
+(pdftex.def)             Requested size: 207.0021pt x 155.25484pt.
 
-Overfull \hbox (117.52686pt too wide) in paragraph at lines 189--190
- [][] 
- []
 
-[5] [6 </home/john/Documents/Python/Networks/figures/Datafit-m=1N=5.png>]
-[7 </home/john/Documents/Python/Networks/figures/Datafit-m=2N=5.png>] [8 </home
-/john/Documents/Python/Networks/figures/Datafit-m=3N=5.png>] [9 </home/john/Doc
-uments/Python/Networks/figures/LogBin-m=1N=5.png>] [10 </home/john/Documents/Py
-thon/Networks/figures/LogBin-m=2N=5.png>] [11 </home/john/Documents/Python/Netw
-orks/figures/LogBin-m=3N=5.png>] (./Networkswriteup.aux) ) 
+LaTeX Warning: File `LogBin-m=4N=5.png' not found on input line 233.
+
+
+! Package pdftex.def Error: File `LogBin-m=4N=5.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.233   		}
+           
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 233.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [7]
+</home/john/Documents/Python/Networks/figures/LR-m=4LB.png, id=64, 462.528pt x 
+346.896pt>
+File: /home/john/Documents/Python/Networks/figures/LR-m=4LB.png Graphic file (t
+ype png)
+ <use /home/john/Documents/Python/Networks/figures/LR-m=4LB.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/LR-m=4LB.
+png used on input line 245.
+(pdftex.def)             Requested size: 172.5pt x 129.37639pt.
+
+[8 </home/john/Documents/Python/Networks/figures/LogBin-m=1N=5.png> </home/john
+/Documents/Python/Networks/figures/LogBin-m=2N=5.png> </home/john/Documents/Pyt
+hon/Networks/figures/LogBin-m=3N=5.png>] [9 </home/john/Documents/Python/Networ
+ks/figures/LR-m=4LB.png>] [10]
+</home/john/Documents/Python/Networks/figures/k1.png, id=79, 462.528pt x 346.89
+6pt>
+File: /home/john/Documents/Python/Networks/figures/k1.png Graphic file (type pn
+g)
+ <use /home/john/Documents/Python/Networks/figures/k1.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/k1.png us
+ed on input line 320.
+(pdftex.def)             Requested size: 172.5pt x 129.37639pt.
+ [11 </home/john/Documents/Python/Networks/figures/k1.png>]
+</home/john/Documents/Python/Networks/figures/Collapse11.png, id=84, 462.528pt 
+x 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/Collapse11.png Graphic file 
+(type png)
+ <use /home/john/Documents/Python/Networks/figures/Collapse11.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Collapse1
+1.png used on input line 331.
+(pdftex.def)             Requested size: 241.49895pt x 181.12799pt.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 \\ F
+          irst I collapse the probability distribution in k by dividing thro...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+</home/john/Documents/Python/Networks/figures/Collapse1.png, id=85, 462.528pt x
+ 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/Collapse1.png Graphic file (
+type png)
+ <use /home/john/Documents/Python/Networks/figures/Collapse1.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Collapse1
+.png used on input line 343.
+(pdftex.def)             Requested size: 241.49895pt x 181.12799pt.
+
+[12 </home/john/Documents/Python/Networks/figures/Collapse11.png>]
+</home/john/Documents/Python/Networks/figures/Collapse2.png, id=90, 462.528pt x
+ 346.896pt>
+File: /home/john/Documents/Python/Networks/figures/Collapse2.png Graphic file (
+type png)
+ <use /home/john/Documents/Python/Networks/figures/Collapse2.png>
+Package pdftex.def Info: /home/john/Documents/Python/Networks/figures/Collapse2
+.png used on input line 351.
+(pdftex.def)             Requested size: 241.49895pt x 181.12799pt.
+
+[13 </home/john/Documents/Python/Networks/figures/Collapse1.png> </home/john/Do
+cuments/Python/Networks/figures/Collapse2.png>] (./Networkswriteup.aux) ) 
 Here is how much of TeX's memory you used:
- 1553 strings out of 493013
- 24673 string characters out of 6133328
- 83754 words of memory out of 5000000
- 5092 multiletter control sequences out of 15000+600000
- 8540 words of font info for 30 fonts, out of 8000000 for 9000
+ 5862 strings out of 493013
+ 102453 string characters out of 6133328
+ 170852 words of memory out of 5000000
+ 9296 multiletter control sequences out of 15000+600000
+ 15148 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,25p,632b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmti10.pfb>
-Output written on Networkswriteup.pdf (11 pages, 473463 bytes).
+ 39i,9n,44p,841b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/
+local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
+courier/ucrr8a.pfb>
+Output written on Networkswriteup.pdf (13 pages, 645014 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 155 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

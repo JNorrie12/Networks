@@ -32,7 +32,6 @@ if input == '1':
 	# d,e= GenGraph(10, 3, repeat=True, draw=True, G0=False)
 	# d,e= GenGraph(10, 3, repeat=False, draw=True, G0=False)
 	
-
 	for m in range(1,4):
 		degreeL = LoadData(10000,m, 1)
 		degree=degreeL[0]
@@ -47,93 +46,133 @@ if input == '1':
 	plt.show()
 
 if input == '2':
-	for m in range(1,4):
-		degreeL= LoadData(10000,m,100)
+	for m in range(1,2):
+		degreeL= LoadData(100000,m,1000)
 		degree=degreeL[0]
 		deg, freq= lb.frequency(degree)
 		norm=float(sum(freq))
-		print norm
 		prob= freq/norm
 		A= 2*m*(m+1)
 		fit1= lambda x: A*x**-3 
 		fit2= lambda x: A/(x*(x+1)*(x+2))  
 		fit1a = fit1(deg)
 		fit2a = fit2(deg) 
+		plt.figure(m)
+		# plt.plot(deg,prob, 'k+', zorder=3)
+		# plt.plot(deg, fit1a, 'r--',zorder=1)
+		# plt.plot(deg, fit2a, 'b-' ,zorder=2)
+	# plt.show()
+		###R^2 TEST######
+		# plt.plot(fit1a, prob, 'k+')
+		# plt.plot(fit2a, prob, 'r+')
+		# plt.show()
+		# print stats.spearmanr(prob, fit1a)
+		# print stats.spearmanr(prob, fit2a)
+		d, e, bins=lb.log_bin(degree, bin_start=m-0.39, first_bin_width=1, a=1.25)
+		# plt.plot(e, fit1(d), 'k+')
+		# plt.plot(d, fit2(d), 'r+') 
+		c=np.array(d)
+		plt.plot(fit1(c), e ,'k+')
+		plt.plot(fit2(c), e,'r+') 
 		
-		plt.loglog(deg,prob, 'k+', zorder=3)
-		plt.loglog(deg, fit1a, 'r--',zorder=1)
-		plt.loglog(deg, fit2a, 'b-' ,zorder=2)
-		plt.show()
-
-		c, e, bins=lb.log_bin(degree, bin_start=m-0.39, first_bin_width=1, a=1.25)
-	
-		boundaries=[]
-		for i in range(len(bins)-1):
-			singlebin=np.array([bins[i], bins[i+1]]) 
-			boundaries.append(singlebin)
-		boundaries=np.log(np.array(boundaries)).T
-		# error=np.log(width)
-		d=np.array(c)
-		fit1b=fit1(d)
-		fit2b=fit2(d)
-		# plt.plot(/c,e, 'gs', markerfacecolor='None', zorder=4)
-		plt.plot(np.log(deg), np.log(fit1a), 'r--',zorder=1)
-		plt.plot(np.log(deg), np.log(fit2a), 'b-' ,zorder=2)
-		plt.errorbar(np.log(c), np.log(e), yerr=boundaries, fmt='ks',elinewidth='.5', ecolor='r')
-		plt.show()
+		# print stats.spearmanr(e, fit1(c))
+		# print stats.spearmanr(e, fit2(c))
 		
-		# c, e=lb.log_bin(degree, bin_start=float(m) ,a=1.7)
-		ks1, pvalks1 =stats.ks_2samp(e, fit1b)
-		ks2, pvalks2 =stats.ks_2samp(e, fit2b)
-		# ks1, pvalks1 =stats.kstest(fit1(d), fit1, N=10000)
-		# ks2, pvalks2 =stats.kstest(e, fit2, N=10000)
-		print ks1, pvalks1
-		print ks2, pvalks2
-	# s, i, r_value, p_value, std_err = scipy.
-		chi1, pvalchi1= stats.chisquare(e, f_exp=fit1b, ddof=2)
-		chi2, pvalchi2= stats.chisquare(e, f_exp=fit2b, ddof=2)
-		print chi1, chi2
-		print pvalchi1, pvalchi2
+		print stats.linregress(prob,fit1a)
+		print stats.linregress(prob, fit2a)
+		print stats.linregress(e, fit1(c))
+		print stats.linregress(e, fit2(c))
+		# boundaries=[]
+		# for i in range(len(bins)-1):
+		# 	singlebin=np.array([bins[i], bins[i+1]]) 
+		# 	boundaries.append(singlebin)
+		# boundaries=np.log(np.array(boundaries)).T
+		# # error=np.log(width)
+		
+		# d=np.array(c)
+		# fit1b=fit1(d)
+		# fit2b=fit2(d)
+		
+		# plt.loglog(c,e, 'gs', markerfacecolor='None', zorder=4)
+		# plt.loglog(deg, fit1a, 'r--',zorder=1)
+		# plt.plot(deg, fit2a, 'b-' ,zorder=2)
+		
+		# plt.errorbar(np.log(c), np.log(e), yerr=boundaries, fmt='ks',elinewidth='.5', ecolor='r')
+		# plt.show()
+		
+		# ks1, pvalks1 =stats.ks_2samp(prob, fit1a)
+		# ks2, pvalks2 =stats.ks_2samp(prob, fit2a)
+		# print ks1, pvalks1
+		# print ks2, pvalks2
+		# chi1, pvalchi1= stats.chisquare(prob, f_exp=fit1a, ddof=2)
+		# chi2, pvalchi2= stats.chisquare(prob, f_exp=fit2a, ddof=2)
+		# print chi1, chi2
+		# print pvalchi1, pvalchi2
+		# mwu1, pvalmwu1= stats.mannwhitneyu(prob, fit1a)
+		# mwu2, pvalmwu2= stats.mannwhitneyu(prob, fit2a)	
+		# print mwu1, mwu2
+		# print pvalmwu1, pvalmwu2
+	plt.show()
 if input == '3':
 	k1=[]
+
+	error=[]
 	Npower= np.array(range(2,6))
 	for i in Npower:
-		degreeL= LoadData(10**i,1, 1 )
-		degree=degreeL[0]
-		kmax=max(degree)
-		k1.append(kmax)
-		N=10**Npower
-	plt.plot(N, k1, 'ro')
+		# degreeL= LoadData(10**i,1, 1000 )
+		degree =GenGraph3(10**i, 1, 100)
+		kmax=np.array([max(j) for j in degree])
+		# degree=degreeL[0]
+		# print len(degree)
+		# breakup= [degree[i:i + 1000] for i in xrange(0, len(degree), 1000)]
+		# kmax=np.array([max(i) for i in breakup])
+		# print kmax
+		k1.append(np.median(kmax))
+		error.append([min(kmax), max(kmax)])
+		# plt.show()
+		# kmax=max(degree)
+	error=np.array(error).T
+	N=10**Npower
+	coeff =np.polynomial.polynomial.polyfit(k1, N,[2] )
+	print coeff
+	coeff2=1/(coeff[-1])**.5
+	x=np.linspace(0,100000,10000)
+	print coeff2
+	fit= coeff2*x**0.5
+	plt.plot(x, fit ,'r--', zorder=1)
+	# plt.plot(N, k1, 'ro', zorder=2)
+	plt.errorbar(N, k1 ,yerr=3*error**0.5, barsabove=True ,linestyle=' ', marker='o', color='k', elinewidth='0.5')
 	plt.show()
 
 if input == '4': 
-	m=3
-	col=['rx', 'bx', 'gx']
-	for i in range(2,5):
-		degreeL= LoadData(10**i,m,100)
+	m=4
+	col=['rx', 'bx', 'gx', 'mx']
+	for i in range(2,6):
+		degreeL= LoadData(10**i,m,1000)
 		degree=degreeL[0]
 		deg, freq= lb.frequency(degree)
 		norm=float(sum(freq))
 		prob= freq/norm
 		k1=max(deg)
-		# plt.loglog(deg, prob)
+		plt.loglog(deg, prob)
 		x= np.linspace(0, 550,500)
 		A= 2*m*(m+1) 
 		fit3= lambda x: A/(x*(x+1)*(x+2))
-		deg, prob, bins=lb.log_bin(degree, bin_start=m-0.39, first_bin_width=1. ,a=1.25)
-		deg= np.array(deg)
+		deg2, prob2, bins=lb.log_bin(degree, bin_start=m-0.39, first_bin_width=1. ,a=1.2)
+		deg2= np.array(deg2)
 		fit3a = fit3(deg)
 		collapse= prob/fit3a
 		plt.figure(1)
 		plt.loglog(x, fit3(x), 'k--' ,lw=0.5)
-		plt.loglog(deg, prob, col[i-2])
+		plt.loglog(deg2, prob2, col[i-2])
+		plt.loglog(deg, prob, col[i-2], zorder=6-i)
 		plt.figure(2)
-		plt.loglog(deg, collapse, col[i-2])
+		plt.loglog(deg, collapse, col[i-2], zorder=6-i)
 		plt.loglog(x, fit3(x)/fit3(x), 'k--')
 		plt.figure(3)
 		plt.loglog(x/(10**i)**.5, fit3(x)/fit3(x), 'k--')
-		plt.loglog(deg/(10**i)**.5, collapse, '.')
-	# axes = plt.gca()
+		plt.loglog(deg/(10**i)**.5, collapse, col[i-2], zorder=6-i)
+	# # axes = plt.gca()
 	# axes.set_xlim([0,4])
 	# axes.set_ylim([0,4])
 	plt.show()

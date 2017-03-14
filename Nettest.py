@@ -32,15 +32,11 @@ def GenGraph2(N,m):
 	nodes=np.array(range(len(G)))
 	x=np.random.choice(np.arange(len(G)), p=prob)
 	for k in range(2*m+1, N):
-		# G.extend(0)
 		G=np.append(G,0)
-		# nodes.extend(k)
 		nodes=np.append(nodes, k)
 		prob=G/float(sum(G))
 		x=np.random.choice(nodes, m, p=prob, replace=False)
 		G[x]+=1
-		# for i in x:
-			# G[i]+=1
 		G[-1]+=m
 		# y=list((k)*np.ones(m))
 		# z=zip(x,y)
@@ -49,7 +45,30 @@ def GenGraph2(N,m):
 	print time.time()-t0
 	return G
 
+def SaveDataTrials(N, m, T):
+	degreefull= []
+	edgefull=[]
+	for i in range(T):
+		degree =GenGraph2(N, m)
+		degreefull.append(degree)
+	df= list(np.array(degreefull).flatten())
 
+	file_path_d = 'Database/Degree-m=' + str(m) + 'Nodes=' + str(N)+'Trails='+str(T)+'.json'
+	# file_path_e = 'Database/Edges-m=' + str(m) + 'Nodes=' + str(N)+'Trails='+str(T)+'.json'
+		
+	with open(file_path_d, 'w') as fp:
+		json.dump(df, fp)
+	# with open(file_path_e, 'w') as fp:
+		# json.dump(ef, fp)
+def LoadData(N,m, T):
+	file_path_d = 'Database/Degree-m=' + str(m) + 'Nodes=' + str(N)+'Trails='+str(T)+'.json'
+	with open(file_path_d) as fp:
+		degree = [json.load(fp)]
+		
+	# file_path_e = 'Database/Edges-m=' + str(m) + 'Nodes=' + str(N)+'Trails='+str(T)+'.json'
+	# with open(file_path_e) as fp:
+	# 	edges = [json.load(fp)]
+	return degree
 
 # Gengraph(100,1)
 # g = GenGraph1(10000,1)
