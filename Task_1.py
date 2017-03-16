@@ -179,13 +179,14 @@ if input == '4':
 if input =='5':
 	N=10000
 	m=3
-	degree, e =RanGraph(N,m)
-	# degree=np.array(degreeL[0])
+	degree=RanGraph1(N,m, 100)
+	print 'BEEP'
+	degree=degree.flatten()
 	deg, freq= lb.frequency(degree)
 	norm=float(sum(freq))
 	prob= freq/norm
 	plt.loglog(deg, prob)
-	fit =lambda k: 1.2*np.exp(-k/3)
-	fit1= fit(deg)
-	plt.loglog(deg, fit1)
+	fit1 =lambda k: m**(k-m)/(m+1)**(k-m+1)
+	plt.loglog(deg, fit(deg))
+	plt.loglog(deg, fit1(deg))
 	plt.show()

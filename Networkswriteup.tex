@@ -108,7 +108,7 @@ p(k,t)=\frac{n(k,t)}{N(t)}\\
 \end{equation}
 So the master equation:
 \begin{equation}
-N(t+1)p(k,t+1)-N(t)p(k,t)=-\frac{(k-1)}{2}p(k-1,t)-\frac{k}{2}p(k,t)+ \delta_k,m
+N(t+1)p(k,t+1)-N(t)p(k,t)=\frac{(k-1)}{2}p(k-1,t)-\frac{k}{2}p(k,t)+ \delta_k,m
 \end{equation}
 In order to go further, we assume that $p(k)$ has nice ergodic properties. This means that $p_{\infty}=lim_{t \rightarrow \infty} p(k,t)$\\, i.e. the limit converges. The Applying this to (6) the final form of our master equation becomes:
 \begin{equation}
@@ -116,7 +116,7 @@ In order to go further, we assume that $p(k)$ has nice ergodic properties. This 
 \end{equation}
 We note that $N(t)=t$  and so we find the final form of the master equation:
 \begin{equation}
-p_{\infty}(k)=-\frac{1}{2}((k-1)p_{\infty}(k-1)-kp_{\infty}(k)) +\delta_{k,m}
+p_{\infty}(k)=\frac{1}{2}((k-1)p_{\infty}(k-1)-kp_{\infty}(k)) +\delta_{k,m}
 \end{equation}
 \subsection{Continuous Approximation}
 Equation (7) can be used to find the degree distribution of the model.
