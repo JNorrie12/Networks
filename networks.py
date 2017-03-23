@@ -13,78 +13,78 @@ import random
 from collections import Counter
 #####################################################
 #Slower way of building graph, however remembers edges
-def GenGraph(N, m, repeat=False, draw=False, G0=True):
-	#2000=5secs 5000=13sec 10,000=51, 20,000=130
-	t0=time.time()
-	if G0==True:
-		g= 2*m+1
-		G=nx.complete_graph(g)
-	#This gives G(0) with E(0)=m*N(0) satisfied
-	else:
-		g=0
-		G=nx.Graph()
-		G=nx.complete_graph(m)
+# def GenGraph(N, m, repeat=False, draw=False, G0=True):
+# 	#2000=5secs 5000=13sec 10,000=51, 20,000=130
+# 	t0=time.time()
+# 	if G0==True:
+# 		g= 2*m+1
+# 		G=nx.complete_graph(g)
+# 	#This gives G(0) with E(0)=m*N(0) satisfied
+# 	else:
+# 		g=0
+# 		G=nx.Graph()
+# 		G=nx.complete_graph(m)
 		
-	prob=np.ones(len(G))/(len(G))
-	x=np.random.choice(np.arange(len(G)), p=prob)
-	for k in range((g)+1, N+1):
-		G.add_node(k)
-		degree=np.array(G.degree(G).values())
-		prob=(degree)/float(sum(degree))
-		x=np.random.choice(G.nodes(), m, p=prob, replace=repeat)
-		#Making m new edges
-		y=list((k)*np.ones(m))
-		z=zip(x,y)
-		for i in z:
-			G.add_edge(*i)
-	if draw==True:
-		nx.draw_circular(G)
-		plt.show()
-		####################
-			# degree=np.array(G.degree(G).values())
-			# prob=(degree)/float(sum(degree))
-			# x=np.random.choice(G.nodes(), p=prob, replace=False)
-	print time.time()-t0
-	return G.degree(G).values(), G.edges(G)
+# 	prob=np.ones(len(G))/(len(G))
+# 	x=np.random.choice(np.arange(len(G)), p=prob)
+# 	for k in range((g)+1, N+1):
+# 		G.add_node(k)
+# 		degree=np.array(G.degree(G).values())
+# 		prob=(degree)/float(sum(degree))
+# 		x=np.random.choice(G.nodes(), m, p=prob, replace=repeat)
+# 		#Making m new edges
+# 		y=list((k)*np.ones(m))
+# 		z=zip(x,y)
+# 		for i in z:
+# 			G.add_edge(*i)
+# 	if draw==True:
+# 		nx.draw_circular(G)
+# 		plt.show()
+# 		####################
+# 			# degree=np.array(G.degree(G).values())
+# 			# prob=(degree)/float(sum(degree))
+# 			# x=np.random.choice(G.nodes(), p=prob, replace=False)
+# 	print time.time()-t0
+# 	return G.degree(G).values(), G.edges(G)
 
-def RanGraph(N, m):
-	t0=time.time()
-	G=nx.Graph()
-	g= 2*m+1
-	G=nx.complete_graph(g)
-	#This gives G(0) with E(0)=m*N(0) satisfied
-	x=np.random.choice(np.arange(len(G)))
-	for k in range((g)+1, N):
-		G.add_node(k)
-		degree=np.array(G.degree(G).values())
-		x=np.random.choice(G.nodes(), m, replace=False)
-		#Making m new edges
-		y=list((k)*np.ones(m))
-		z=zip(x,y)
-		for i in z:
-			G.add_edge(*i)
-		####################
-			# degree=np.array(G.degree(G).values())
-			# prob=(degree)/float(sum(degree))
-			# x=np.random.choice(G.nodes(), p=prob, replace=False)
-	print time.time()-t0
-	return G.degree(G).values(), G.edges(G)
+# def RanGraph(N, m):
+# 	t0=time.time()
+# 	G=nx.Graph()
+# 	g= 2*m+1
+# 	G=nx.complete_graph(g)
+# 	#This gives G(0) with E(0)=m*N(0) satisfied
+# 	x=np.random.choice(np.arange(len(G)))
+# 	for k in range((g)+1, N):
+# 		G.add_node(k)
+# 		degree=np.array(G.degree(G).values())
+# 		x=np.random.choice(G.nodes(), m, replace=False)
+# 		#Making m new edges
+# 		y=list((k)*np.ones(m))
+# 		z=zip(x,y)
+# 		for i in z:
+# 			G.add_edge(*i)
+# 		####################
+# 			# degree=np.array(G.degree(G).values())
+# 			# prob=(degree)/float(sum(degree))
+# 			# x=np.random.choice(G.nodes(), p=prob, replace=False)
+# 	print time.time()-t0
+# 	return G.degree(G).values(), G.edges(G)
 ###########################################################################
-def GenGraph2(N,m):
-	t0=time.time()
-	G=2*m*np.ones(2*m+1)
-	prob=G/float(sum(G))
-	nodes=np.array(range(len(G)))
-	x=np.random.choice(np.arange(len(G)), p=prob)
-	for k in range(2*m+1, N):
-		G=np.append(G,0)
-		nodes=np.append(nodes, k)
-		prob=G/float(sum(G))
-		x=np.random.choice(nodes, m, p=prob, replace=False)
-		G[x]+=1
-		G[-1]+=m
-	print time.time()-t0
-	return G
+# def GenGraph2(N,m):
+# 	t0=time.time()
+# 	G=2*m*np.ones(2*m+1)
+# 	prob=G/float(sum(G))
+# 	nodes=np.array(range(len(G)))
+# 	x=np.random.choice(np.arange(len(G)), p=prob)
+# 	for k in range(2*m+1, N):
+# 		G=np.append(G,0)
+# 		nodes=np.append(nodes, k)
+# 		prob=G/float(sum(G))
+# 		x=np.random.choice(nodes, m, p=prob, replace=False)
+# 		G[x]+=1
+# 		G[-1]+=m
+# 	print time.time()-t0
+# 	return G
 
 
 def GenGraph3(N,m, T):
@@ -119,35 +119,35 @@ def GenGraph3(N,m, T):
 	return np.array(degreeTotal), G
 
 
-def RanGraph1(N,m, T):
-	t0=time.time()
-	GTotal=[]
-	degreeTotal=[]
+# def RanGraph1(N,m, T):
+# 	t0=time.time()
+# 	GTotal=[]
+# 	degreeTotal=[]
 	
-	G0=[] #Making initial graph combinatorically 
-	g=2*m+1
-	for j in range(g-1): 
-		for k in range(j+1,g):
-			G0.extend([j,k])
-	for t in range(T):
-		G=G0[:] 					#Slicing to avoid change G0	
-		for k in range(2*m+1, N):
-			x=[]					
-			while len(x)<m:			#No repeated edges
-				value=random.randint(0,k)
-				if value in x:
-					pass
-				else:
-					x.append(value)
-			for i in x:
-				G.append(k)
-				G.append(i)
-		GTotal.append(G)
-	for i in GTotal:
-		degree = Counter(i) #returns a list of degrees for each sample separately
-		degreeTotal.append(degree.values())
-	print time.time()-t0
-	return np.array(degreeTotal)
+# 	G0=[] #Making initial graph combinatorically 
+# 	g=2*m+1
+# 	for j in range(g-1): 
+# 		for k in range(j+1,g):
+# 			G0.extend([j,k])
+# 	for t in range(T):
+# 		G=G0[:] 					#Slicing to avoid change G0	
+# 		for k in range(2*m+1, N):
+# 			x=[]					
+# 			while len(x)<m:			#No repeated edges
+# 				value=random.randint(0,k)
+# 				if value in x:
+# 					pass
+# 				else:
+# 					x.append(value)
+# 			for i in x:
+# 				G.append(k)
+# 				G.append(i)
+# 		GTotal.append(G)
+# 	for i in GTotal:
+# 		degree = Counter(i) #returns a list of degrees for each sample separately
+# 		degreeTotal.append(degree.values())
+# 	print time.time()-t0
+# 	return np.array(degreeTotal)
 
 def RanGraph1(N,m, T):
 	t0=time.time()
@@ -164,11 +164,11 @@ def RanGraph1(N,m, T):
 		for k in range(2*m+1, N):
 			x=[]					
 			while len(x)<m:			#No repeated edges
-				value=random.randint(0,k)
+				value=random.randint(0,k-1)
 				if value in x:
 					pass
-				elif value == k:
-					pass
+				# elif value == k:
+					# pass
 				else:
 					x.append(value)
 			for i in x:
@@ -201,22 +201,29 @@ def WalkGraph1(N, m, L, T):
 	for t in range(T):
 		G=G0[:] 					#Slicing to avoid change G0	
 		for k in range(2*m+1, N):				
-			# while len(x)<m:			#No repeated edges
-			print Neighbourhood
-			x=random.randint(0,k-1)
-			for i in range(L):
-				x=random.choice(Neighbourhood[x]) #Randon walk through graph
-				
-			G.append(k)
-			G.append(x)
-			Neighbourhood[x].append(k) #Adding the 2 nodes to eachother's neighbourhood
-			Neighbourhood[k].append(x)
+			x=[]
+			while len(x)<m:			#No repeated edges
+			# print Neighbourhood
+				value=random.randint(0,k-1)
+				for i in range(L):
+					value=random.choice(Neighbourhood[value]) #Randon walk through graph
+				if value in x:
+					pass
+				else:
+					x.append(value)
+			
+			for i in x:
+				G.append(k)
+				G.append(i)
+				Neighbourhood[i].append(k) #Adding the 2 nodes to eachother's neighbourhood
+				Neighbourhood[k].append(i)
 		GTotal.append(G)
 	for i in GTotal:
 		degree = Counter(i) #returns a list of degrees for each sample separately
 		degreeTotal.append(degree.values())
 	print time.time()-t0
 	return np.array(degreeTotal), Neighbourhood
+WalkGraph1(100, 3, 1, 1)
 
 ####################SAVING AND LOADING#####################################
 def SaveData(N, m):
