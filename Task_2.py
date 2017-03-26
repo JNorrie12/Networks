@@ -10,7 +10,7 @@ from scipy.optimize import curve_fit
 input = sys.argv[1]
 
 if input =='1':
-	N=10000
+	N=100000
 	col=['rx', 'bx', 'gx', 'mx']
 	for m in range(1,5):
 		degree=RanGraph1(N,m, 100)
@@ -32,25 +32,48 @@ if input =='1':
 		plt.legend(handles=[black, red, blue, green, purple])	
 	plt.show()
 
+if input =='a':
+	col=['r.', 'b.', 'g.', 'm.', 'y.']
+	m=3
+	for i in range(2,6):
+		degree=RanGraph1(10**i,m, 100)
+		degree=degree.flatten()
+		deg, freq= lb.frequency(degree)
+		x=np.linspace(1,max(deg),100)
+		norm=float(sum(freq))
+		prob= freq/norm
+		fit1 =lambda k: m**(k-m)/(m+1)**(k-m+1)
+		plt.loglog(deg, prob, col[i-2], zorder=8-i)
+		plt.loglog(x, fit1(x), 'k-', lw=.5,zorder=1)
+		plt.xlabel('$k$')
+		plt.ylabel('$p(k)$')
+		black = mlines.Line2D([], [], color='k', linestyle='-',lw=.5,label='Theoretical Fit for Respective $m$')
+		red = mlines.Line2D([], [], color='r', linestyle=' ', marker='.',label='$N=10^2')
+		blue = mlines.Line2D([], [], color='b', linestyle=' ', marker='.', label='N=10^3')
+		green = mlines.Line2D([], [], color='g', linestyle=' ', marker='.',label='N=10^4')
+		purple = mlines.Line2D([], [], color='m', linestyle=' ', marker='.',label='N=10^5')
+		plt.legend(handles=[black, red, blue, green, purple])	
+	plt.show()
 if input == '2':
+	m=4
 	k1=[]
 	error=[]
 	def fit(x,a):
 		return a*np.log(x)
 	Npower= np.array(range(2,6))
 	for i in Npower:
-		degree =RanGraph1(10**i, 4, 100)
+		degree =RanGraph1(10**i, m, 100)
 		kmax=np.array([max(j) for j in degree])
 		k1.append(np.mean(kmax))
+		error.append(np.std(kmax))
 	N=10**Npower
 	
-	fit= curve_fit(fit, N, k1)
-	print fit[0][0]
 	x=np.linspace(0, 100000, 10000)
-	y= fit[0][0]*np.log(x)
-	plt.plot(N, k1, 'ko', zorder=2)
+	y= m - np.log(x)/(np.log(m)-np.log(m+1))
+	# plt.plot(N, k1, 'ko', zorder=2)
+	plt.errorbar(N, k1 ,yerr=error, barsabove=True ,linestyle=' ', marker='o', color='k', elinewidth='0.5')
 	plt.plot(x, y, 'b--', zorder=1)
-	blue = mlines.Line2D([], [], color='b', linestyle='--', label='Fit, '+ str(round(fit[0][0],1))+ 'log(x)')
+	blue = mlines.Line2D([], [], color='b', linestyle='--', label='Theoretical Fit')
 	black = mlines.Line2D([], [], color='k', linestyle=' ', marker='o', label='Data')
 	plt.legend(handles=[black, blue])
 	plt.xlabel('Number of Nodes in Network ($N$)')

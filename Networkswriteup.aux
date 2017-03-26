@@ -1,31 +1,34 @@
 \relax 
-\@writefile{toc}{\contentsline {section}{\numberline {1}Implementation of the BA Model}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Implementation of the BA Model}{2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Initial Graph}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textit  {$\mathcal  {G}_0$ for m=1,2,3 respectively.}\relax }}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Double Edges}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Left: \textit  {Example graph of 10 nodes where we allows double edges(m=3). Not that there are nodes with degree less than m.}  Right: \textit  {Exampleof graph of 10 nodes. Note that all nodes have degree $>m$. Note that in both cases, I have not used $\mathcal  {G}_0$, and instead have used a small initial graph to emphasise the difference in the cases.}\relax }}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Udpating Probabilities}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Testing}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.5}Dynamic Testing}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.6}Macroscopic Testing}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Theoretical Derivation of Degree}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Continuous Approximation}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Difference Derivation}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Comparison with Real Data}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The loglog plots of the raw data porbability distribuiton. This data was captured from networks of size $10^5$, and over $10^3$ traisl. a,b,c,d show the outcome for m=1,2,3,4 repectively.\relax }}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Statistical Approach}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Log binned probability distributions for $m=1,2,3,4$. The error bars show the logarithm of the deviation for a given data point. The increase of the bars implies that the variance of the data increases exponentially for large values of $k$\relax }}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The theoretical model(red) and the naive model(black) vs. the log binned, for $m=4$. \relax }}{9}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces My caption\relax }}{9}}
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{my-label}{{1}{9}}
-\newlabel{my-label@cref}{{[table][1][]1}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Finite Size Effect}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Theoretical Derivation}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Experimental Data}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The median for $N=1,2,3,4$ and a naive fit of $k1 \propto \sqrt  {N}$ are plotted. The error bars represent $\sqrt  {deviation}$ from our most extreme statistics and the median.\relax }}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Data Collapse}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The median for $N=1,2,3,4$ and a naive fit of $k1 \propto \sqrt  {N}$ are plotted. The error bars represent $\sqrt  {deviation}$ from our most extreme statistics and the median.\relax }}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The median for $N=1,2,3,4$ and a naive fit of $k1 \propto \sqrt  {N}$ are plotted. The error bars represent $\sqrt  {deviation}$ from our most extreme statistics and the median.\relax }}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The median for $N=1,2,3,4$ and a naive fit of $k1 \propto \sqrt  {N}$ are plotted. The error bars represent $\sqrt  {deviation}$ from our most extreme statistics and the median.\relax }}{13}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Random Attachement}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textit  {$\mathcal  {G}_0$ for m=1,2,3 respectively.}\relax }}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Double Edges}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textit  {Degree distribution for m=10, N=1000 and N=100,000 respectively. There is little diference between between the distribution where double edges were allowed, and where double edges weren't allowed. }\relax }}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Testing}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces (a) shows the degree distributions of a single trial for $N=10^5$ and $m=1,2,3,4$. They exhibits many features of the BA model. Firstly there is a prominent 'fat tail' to our distribution. This relates to having single nodes with high degrees(hubs), however the majority having fairly low degree.   Secondly the figure shows that there distributions follow a powerlaw, $k^{-\gamma }$, where $\gamma $ will be derived later. This is a definition of a scale free network.   (b) shows the degree distributions of 1000 trails for $N=10^4$ and $m=1,2,3,4$. The fat tail of the distribution is a lot more defined, since there is more data. I shall use this method of rapeating trials throughout my report to obtain better statistics and understanding.\relax }}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Degree Distribution of the BA model}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Theoretical Derviation}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Continuous Approximation}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Difference Derivation}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Comparison with Real Data}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The loglog plots of the raw data porbability distribuiton. This data was captured from networks of size $10^5$, and over $10^3$ traisl. a,b,c,d show the outcome for m=1,2,3,4 repectively.\relax }}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Statistical Approach}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The degree distribution for random attachment. Note the distinctive exponential cut off and lack of a fat tail. This data was taken from graphs of N=10,000, over 100 trails, for m=1,2,3,4.\relax }}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The theoretical model(red) and the naive model(black) vs. the log binned, for $m=4$. \relax }}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Finite Size Effect}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Theoretical Derivation}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Experimental Data}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The mean $k_1$ for $N=10^2, 10^3, 10^4, 10^5$. The fit(red line) is the one described by equation (20). a) Shows the plot, and b) shows the log-log plot.\relax }}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Data Collapse}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces a) Shows the uncollapsed probability distributions for $N=10^2,10^3,10^4,10^5$ , $m=4$. b) Shows the collapse when dividing through by the theoretical distribution. \relax }}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Random Attachement}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Degree Distribution}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The degree distribution for random attachment. Note the distinctive exponential cut off and lack of a fat tail. This data was taken from graphs of N=100,000, over 100 trails, for m=1,2,3,4.\relax }}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Theoretical Derviation of Largest Degree}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The mean largest degree $k_1$ computed from 100 trials, for $m=4$, $N=10^2, 10^3, 10^4, 10^5$. Error bars represent the standard deviation of each sample. The blue line is the theoretical fit desribed in (35). This data follows this fit to a high level of accuracy. \relax }}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Random Walk Preferential Attachment}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}$L=0$}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}$L=1$}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces (a) Shows the model for L=1, $m=1,2,10$ and $N=10,000$, over 100 trials. (b) Shows the MDA model for the same parameters. There is some differnece between the two models, especialy for $m$ and $k$. However, with $m=1,2$, both models exhibit the 'Winners take it all' behaviour for small m. I.e. The $p(m) \approx 1$, so the majority of the nodes in our network have minumum degree, with a few small 'super hubs' with large degree.  Also note that the gradient of the log log plot in both cases increase with m. THis implies that with have a power law dependent on m as suggested.\relax }}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}$L > 1$}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces a) shows the degree distribution for $N=10^4$, $m=1$, captured over 100 trials, $L=2,4,100$. As L increases there is slight evidence of convergence towards the theoretical fit of BA model, although, all three cases obviously shows behaviour similar to preferential attachment.  (b) Shows the curious case one when L is the diameter of the graph. For this data was captured over 100 trials, from $N=10^3,10^4,10^5$, and $L=7,9,11$ (diameters for respecting network size). Unlike other cases, the degree distribution does not appear to follow the fit, however appears to follow an almost exact, different, power law. The example above(black line) is $p_{\infty }(k) \propto k^{-2.5}$. Another interesting feature, is the size of the fat tail. Lookng at $N=10^4$, the fat tail for $L=9$ is roughly 15 times larger than that of $L=100$. \relax }}{16}}
